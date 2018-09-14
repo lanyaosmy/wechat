@@ -1,0 +1,35 @@
+<!--pages/receiver/index.wxml-->
+<!--顶栏-->
+<import src="../templates/reList.wxml"/>
+<view class="topBar">
+  <view class="topLeft" bindtap="scanToRece">
+    <image class="scanImage" src="../images/scan_rece.png"></image>
+    <text class="scanTitle">扫码收件</text>
+  </view>
+  <view class="topLeft" bindtap="scanToSend">
+    <image class="scanImage" src="../images/scan_send.png"></image>
+    <text class="scanTitle">扫码配送</text>
+  </view>
+</view>
+<!--主列表项-->
+<view class="mainItem {{_hide==1?'on':''}}">
+  <block wx:for="{{receivelist}}" wx:key="id">
+    <template is="relist" data="{{...item}}"></template>
+  </block>
+</view>
+<view class="mainItem {{_hide==0?'on':''}}">
+  <block wx:for="{{sendlist}}" wx:key="id">
+    <template is="sendlist" data="{{...item}}"></template>
+  </block>
+</view>
+<!--底部按钮-->
+<view class="bottomBar">
+  <view class="bottomLeft {{_hide==1?'bon':''}}" bindtap="changeToRece">
+    <text>未配送</text>
+  </view>
+  <view class="bottomRight {{_hide==0?'bon':''}}" bindtap="changeToSend">
+    <text>配送中</text>
+  </view>
+</view>
+
+

@@ -1,0 +1,66 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20rpx;
+}
+.section{
+  border-radius: 20rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow:0px 0px 8rpx 2rpx #e7e7e7;
+  margin-bottom: 4rpx;
+}
+
+.title{
+  margin: 10rpx;
+}
+
+.title text{
+  font-weight: 700;
+}
+
+.goodsImage{
+  float: left;
+  margin-top:10rpx;
+  margin-left:40rpx;
+}
+.goodsImage image{
+  width: 140rpx;
+  height: 130rpx;
+}
+
+.goodsInfo{
+  float: left;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30rpx;
+}
+.goodsGrey{
+  margin-bottom: 10rpx;
+}
+
+.goodsGrey text{
+  display: block;
+  float: left;
+  font-size: 25rpx;
+  color: #707070;
+}
+
+.goodsGrey label{
+  float: left;
+  font-size: 25rpx;
+  color: #707070;
+}
+
+.goodsTitle{
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+
+

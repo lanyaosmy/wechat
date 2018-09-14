@@ -1,0 +1,37 @@
+/* pages/user/tel.wxss */
+/* .pageg{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
+.contain{
+  margin: 10rpx;
+  height:80rpx;
+  border:1rpx solid #aaa;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.on{
+  border:1rpx solid #AAE6CC;
+}
+/*输入框*/
+.inputBox{
+  display: inline-block;
+  margin-left: 20rpx;
+  width: 85%;
+}
+
+.infoicon{
+  width:40rpx;
+  margin-left: 20rpx;
+  height:40rpx;
+}
+
+button{
+  width:200rpx;
+  font-size: 30rpx;
+  background:#AAE6CC;
+  color: #FFF;
+  border-radius: 50rpx;
+}

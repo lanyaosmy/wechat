@@ -1,0 +1,89 @@
+<template name="relist">
+  <view class="list {{overTime?'highlight':''}}" >
+    <view class="listFirst">
+      <image class="listIcon" src="../images/order.png"></image>
+      <text>订单号:</text>
+      <text>{{id}}</text>
+    </view>
+    <view class="listSecond">
+      <image class="listIcon" src="../images/date.png"></image>
+      <text>保留天数:</text>
+      <text>{{kptime}}天</text>
+      <image class="listIcon" style="margin-left:25%;" src="../images/worker.png"></image>
+      <text>揽收员:</text>
+      <text>{{staffName}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="sendlist">
+  <view class="list {{overTime?'highlight':''}}" >
+    <view class="listFirst">
+      <image class="listIcon" src="../images/order.png"></image>
+      <text>订单号:</text>
+      <text>{{id}}</text>
+    </view>
+    <view class="listSecond">
+      <image class="listIcon" src="../images/date.png"></image>
+      <text>保留天数:</text>
+      <text>{{kptime}}天</text>
+      <image class="listIcon" style="margin-left:25%;" src="../images/worker.png"></image>
+      <text>配送员:</text>
+      <text>{{staffName}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="recelist">
+  <view class="list {{overTime?'highlight':''}}"  bindtap="confirmReceive" data-id="{{id}}">
+    <view class="listFirst">
+      <image class="listIcon" src="../images/order.png"></image>
+      <text>订单号:</text>
+      <text>{{id}}</text>
+      <image class="listIcon"   style="margin-left:25%;" src="../images/date.png"></image>
+      <text>保留天数:</text>
+      <text>{{kptime}}天</text>
+    </view>
+    <view class="listSecond">
+      <image class="listIcon" src="../images/worker.png"></image>
+      <text>取件地址：</text>
+      <text>{{sendAddr}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="sendList">
+  <view class="list {{overTime?'highlight':''}}" >
+    <view class="listFirst">
+      <image class="listIcon" src="../images/order.png"></image>
+      <text>订单号:</text>
+      <text>{{id}}</text>
+    </view>
+    <view class="listSecond">
+      <image class="listIcon" src="../images/date.png"></image>
+      <text>保留天数:</text>
+      <text>{{kptime}}天</text>
+      <image class="listIcon" style="margin-left:25%;" src="../images/worker.png"></image>
+      <text>配送员:</text>
+      <text>{{recvStaffId}}</text>
+    </view>
+  </view>
+</template>
+
+<template name="pickList">
+  <view class="list {{overTime?'highlight':''}}" >
+    <view class="listFirst">
+      <image class="listIcon" src="../images/order.png"></image>
+      <text>订单号:</text>
+      <text>{{id}}</text>
+    </view>
+    <view class="listSecond">
+      <image class="listIcon" src="../images/date.png"></image>
+      <text>保留天数:</text>
+      <text>{{kptime}}天</text>
+      <image class="listIcon" style="margin-left:20%;" src="../images/worker.png"></image>
+      <text>用户电话:</text>
+      <text>{{recvUserPhone}}</text>
+    </view>
+  </view>
+</template>

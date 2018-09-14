@@ -1,0 +1,23 @@
+<!--pages/user/address.wxml-->
+<block wx:for="{{addrList}}" wx:key="addrId">
+  <view class="contain">
+    <image src="../images/edit.png" class="infoicon"></image>
+    <text class="inputBox">{{item.city}}{{item.distant}}{{item.detail}}</text>
+    <image src="../images/delete.png" class="infoicon" bindtap="deleteaddr" data-id="{{item.addrId}}"></image>
+  </view>
+</block>
+<view class="containnew">
+ <view class="inputline">
+  <text>市区</text>
+  <picker mode="multiSelector" bindchange="bindRegionChange" value="{{multiIndex}}" bindcolumnchange="bindMultiPickerColumnChange"  name="recAddr" custom-item="{{customItem}}" range="{{multiArray}}">
+    <view class="picker">
+      {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+  </view>
+  <view class="inputline">
+    <text>街道地址</text>
+    <input type="text" bindinput="inputstreet"></input>
+  </view>
+</view>
+<button bindtap="submitaddr">新增</button>

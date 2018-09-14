@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/login/register",
+    "pages/pick/pick",
+    "pages/send/send",
+    "pages/send/order",
+    "pages/send/chooseSite",
+    "pages/send/localOrder",
+    "pages/user/user",
+    "pages/logistics/logistics",
+    "pages/user/tel",
+    "pages/user/address",
+    "pages/transCenter/index",
+    "pages/lastLocation/index",
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "佛系少女",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "backgroundColor": "#55efc4",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "pages/images/index_tab.png",
+        "iconPath": "pages/images/index.png"
+      },
+      {
+        "pagePath": "pages/pick/pick",
+        "text": "取件",
+        "selectedIconPath": "pages/images/pick_tab.png",
+        "iconPath": "pages/images/pick.png"
+      },
+      {
+        "pagePath": "pages/send/send",
+        "text": "寄件",
+        "selectedIconPath": "pages/images/send_tab.png",
+        "iconPath": "pages/images/send.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "selectedIconPath": "pages/images/user_tab.png",
+        "iconPath": "pages/images/user.png"
+      }
+    ]
+  }
+}

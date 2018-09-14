@@ -1,0 +1,28 @@
+.list{
+  width: 100%;
+  background: #fff;
+  font-size: 24rpx;
+  box-shadow:0px 0px 8rpx 2rpx #e7e7e7;
+  margin-bottom: 20rpx;
+}
+.listFirst{
+  margin: 20rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.listSecond{
+  margin: 20rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.listIcon{
+  width:35rpx;
+  height:35rpx;
+  margin-right: 20rpx; 
+}
+.highlight{
+  box-shadow:0px 0px 8rpx 2rpx #FF9800;
+}

@@ -1,0 +1,102 @@
+/**index.wxss**/
+@import "../templates/listItem.wxss";
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+page{
+  height: 100%;
+}
+.contain{
+  width:100%;
+  height:100%;
+}
+.topBar{
+  width: 100%;
+  height: 15%;
+  background: #55efc4;
+  display: flex;
+  align-items: center;
+}
+
+.scanButton{
+  float: left;
+  margin-left: 5%;
+}
+
+.scanImage{
+  width: 96rpx;
+  height: 96rpx;
+}
+.searchBar{
+  float: left;
+  width:70%;
+  background: #fff;
+  border-radius: 20rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.searchBar input{
+  float: left;
+  font-size: 30rpx;
+  background-color: #fff;
+  width:80%;
+  height: 70rpx;
+  padding-left: 20rpx;
+  border-radius: 20rpx;
+}
+.searchBar button{
+  float: left;
+  font-size: 20rpx;
+  width: 120rpx;
+  margin: 10% 0% 5% 0%;
+  background: #5EE083;
+  color: #fff;
+}
+
+
+.infoicon{
+  width:40rpx;
+  margin-left: 20rpx;
+  height:40rpx;
+}
+
+.more{
+    
+    border-radius: 20rpx;
+    text-align: center;
+    padding: 10rpx;
+}
+.more text{
+    font-size: 30rpx;
+    font-weight: 700;
+    color: #707070;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

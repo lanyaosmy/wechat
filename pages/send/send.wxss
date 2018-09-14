@@ -1,0 +1,51 @@
+/* pages/send/send.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 40rpx 20rpx 40rpx;
+}
+
+.section{
+  height:200rpx;
+  width:668rpx;
+  border-radius: 24rpx;         
+  margin-bottom: 30rpx;
+}
+
+.sendImage{
+  float:left;
+  margin:36rpx;
+  margin-left:48rpx; 
+}
+.sendImage image{
+  width:128rpx;
+  height:128rpx;
+}
+
+.sendInfo{
+  float: left;
+  margin:36rpx 48rpx auto 0rpx;
+}
+.title{
+  font-size:50rpx;
+  font-weight: 700;
+  display: block;
+}
+
+.note{
+  font-size: 25rpx;
+  color: rgba(176, 176, 176, 1);
+  margin-top: 10rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

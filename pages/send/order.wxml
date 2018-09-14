@@ -1,0 +1,72 @@
+<!--pages/send/order.wxml-->
+<view class="topBar" bindtap='chooseSite'>
+  <image src="../images/position.png" class="position"></image>
+  <text class="address">{{site}}</text>
+  <image src="../images/right.png" class="rightRow"></image>
+</view>
+<view class="main">
+  <form bindsubmit='orderSubmit'>
+    <view class="label">
+      <text>寄件人信息</text>
+    </view>
+    <view class="section">
+      <view class="inputline">
+        <text>姓名</text>
+        <input type="text" name="sendName" value="{{userName}}"></input>
+      </view>
+      <view class="inputline">
+        <text>电话</text>
+        <input type="text" name="sendPhone" value="{{userTel}}"></input>
+      </view>
+      <view class="inputline">
+        <text>地址</text>
+        <picker bindchange="bindAddrChange" value="{{index}}" name="sendAddr" range="{{userAddr}}">
+          <view class="picker">
+            {{userAddr[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="label">
+      <text>收件人信息</text>
+    </view>
+    <view class="section">
+      <view class="inputline">
+        <text>姓名</text>
+        <input type="text" name="recName"></input>
+      </view>
+      <view class="inputline">
+        <text>电话</text>
+        <input type="text" name="recPhone"></input>
+      </view>
+      <view class="inputline">
+      <text>市区</text>
+      <picker mode="multiSelector" bindchange="bindRegionChange" value="{{multiIndex}}" bindcolumnchange="bindMultiPickerColumnChange"  name="recAddr" custom-item="{{customItem}}" range="{{multiArray}}">
+        <view class="picker">
+          {{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}
+        </view>
+      </picker>
+      </view>
+      <view class="inputline">
+        <text>街道地址</text>
+        <input type="text" bindinput="inputStreet"></input>
+      </view>
+    </view>
+    <view class="label">
+      <text>物品信息</text>
+    </view>
+    <view class="section">
+      <view class="inputline">
+        <text>名称</text>
+        <input type="text" name="goodsName"></input>
+      </view>
+      <view class="inputline">
+        <text>备注</text>
+        <input type="text" name="comments"></input>
+      </view>
+    </view>
+
+  
+  <button form-type='submit'>提交</button>
+  </form>
+</view>

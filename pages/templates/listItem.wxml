@@ -1,0 +1,121 @@
+<template name="listItemCode"> 
+  <navigator  class="section" url="../logistics/logistics?orderNum={{orderNum}}&show=0">
+    <view>
+       <view class="goodsImage">
+          <image src='../images/sample.jpg'></image>
+       </view>
+       <view class="goodsInfo">
+          <text class="goodsTitle">{{name}}</text>
+          <view class="goodsGrey">
+            <label>快递单号：</label>
+            <text>{{orderNum}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>取件地址：</label>
+            <text>{{location}}</text>
+          </view>
+       </view>
+
+    </view>
+  </navigator>
+  <view style="display:flex;justify-content:space-around;margin-bottom: 20rpx;">
+    <view class="more" bindtap="showCode" data-id="{{orderNum}}">
+      <text>显示取件二维码</text>
+    </view>
+    <view class="more" bindtap="confirmRece" data-id="{{orderNum}}">
+      <text>确认收件</text>
+    </view>
+  </view>
+</template>
+
+<template name="listItemIndex"> 
+  <navigator url="../logistics/logistics?orderNum={{orderNum}}&show=0">
+    <view class="section">
+       <view class="goodsImage">
+          <image src='../images/sample.jpg'></image>
+       </view>
+       <view class="goodsInfo">
+          <text class="goodsTitle">{{name}}</text>
+          <view class="goodsGrey">
+            <label>快递单号：</label>
+            <text>{{orderNum}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>快递位置：</label>
+            <text>{{location}}</text>
+          </view>
+       </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="listItem"> 
+  <navigator url="../logistics/logistics?orderNum={{orderNum}}&show=1">
+    <view class="section">
+       <view class="goodsImage">
+          <image src='../images/sample.jpg'></image>
+       </view>
+       <view class="goodsInfo">
+          <text class="goodsTitle">{{name}}</text>
+          <view class="goodsGrey">
+            <label>快递单号：</label>
+            <text>{{orderNum}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>快递位置：</label>
+            <text>{{currLoc}}</text>
+          </view>
+       </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="listItemRece"> 
+  <navigator url="../logistics/logistics?orderNum={{orderNum}}&show=1">
+    <view class="section">
+       <view class="goodsImage">
+          <image src='../images/sample.jpg'></image>
+       </view>
+       <view class="goodsInfo">
+          <text class="goodsTitle">{{name}}</text>
+          <view class="goodsGrey">
+            <label>快递单号：</label>
+            <text>{{orderNum}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>起始位置：</label>
+            <text>从{{startLoc}}到{{endLoc}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>签收时间：</label>
+            <text>{{recTime}}</text>
+          </view>
+       </view>
+    </view>
+  </navigator>
+</template>
+
+<template name="listItemSearch"> 
+  <navigator url="../logistics/logistics?orderNum={{orderNum}}&show=1">
+    <view class="section">
+       <view class="goodsImage">
+          <image src='../images/sample.jpg'></image>
+       </view>
+       <view class="goodsInfo">
+          <text class="goodsTitle">{{goodName}}</text>
+          <view class="goodsGrey">
+            <label>快递单号：</label>
+            <text>{{orderNum}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>快递位置：</label>
+            <text>{{currLoc}}</text>
+          </view>
+          <view class="goodsGrey">
+            <label>状态：</label>
+            <text>{{status}}</text>
+          </view>
+       </view>
+    </view>
+  </navigator>
+</template>

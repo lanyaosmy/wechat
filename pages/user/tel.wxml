@@ -1,0 +1,7 @@
+<!--pages/user/tel.wxml-->
+<view  class="contain {{_focus==1?'on':''}}">
+    <image src="../images/tel.png" class="infoicon"></image>
+    <input type='text' placeholder='请输入电话号码' bindinput="setTel" class="inputBox" value='{{userTel}}' bindfocus='inputfocus' bindblur='inputblur'></input>
+</view>
+<button bindtap="submitTel">确认</button>
+

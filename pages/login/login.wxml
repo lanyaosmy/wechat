@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="contain">
+  <view class='icon'>
+    <image class="banner" src='../images/loginIcon.png'></image>
+  </view>
+  <form class="loginform" bindsubmit="loginsubmit">
+    <view class='inputView'>
+      <image src='../images/login_tel.png'></image>
+      <text style='float:left;'>用户名:</text>
+      <input type='text' name="phone" placeholder='请输入手机号码'></input>
+    </view>
+    <view class='inputView'>
+      <image src='../images/login_pwd.png'></image>
+      <text style='float:left;'>密码:</text>
+      <input type='password' name="password" placeholder='请输入密码'></input>
+    </view>
+    <button class="loginButton" form-type='submit'>登录</button>
+    <button class="registerButton" bindtap="register">注册</button>
+  </form>
+</view>

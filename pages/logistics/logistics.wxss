@@ -1,0 +1,135 @@
+/* pages/logistics/logistics.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.topBar{
+  width:100%;
+  height:180rpx;
+  display:flex;
+  align-items: center;
+  padding:10rpx;
+  background: #55efc4;
+}
+
+.goodsImage{
+  float: left;
+  margin-top:10rpx;
+  margin-left:40rpx;
+}
+
+.goodsImage image{
+  width: 140rpx;
+  height: 130rpx;
+}
+
+.goodsInfo{
+  float: left;
+  margin: 10rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.goodsGrey{
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.goodsGrey text{
+  display: block;
+  float: left;
+  font-size: 25rpx;
+  color: rgba(176, 176, 176, 1);
+}
+
+.goodsGrey label{
+  float: left;
+  font-size: 25rpx;
+  color: rgba(176, 176, 176, 1);
+}
+
+.goodsTitle{
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+
+.codeButton{
+  float: left;
+  width:300rpx;
+  font-size: 20rpx;
+  background: #fff;
+  border: 1rpx solid #5EE083;
+  color: #5EE083;
+  
+}
+
+.hide{
+  display: none;
+}
+
+.list{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx;
+  margin-top: 40rpx;
+}
+.item{
+  display: flex;
+  align-items: center;
+  height:80rpx;
+}
+.item text{
+  font-size: 25rpx;
+  color: #8a8a8a;
+}
+.line{
+  width: 64rpx;
+  height:80rpx;
+}
+
+.modalMask{
+  height:100%;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+.modalMenu{
+  position: fixed;
+  top:25%;
+  left:20%;
+  overflow: hidden;
+  z-index: 999;
+  background: #fff;
+  width:60%;
+  height:550rpx;
+  border-radius: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalMenu button{
+  width:100%;
+  color: #66ccff;
+  font-size: 30rpx;
+}
+.modalTitle{
+  margin: 10rpx;
+}
+.modalTitle text{
+  font-size:26rpx;
+  font-weight: 700;
+}
+.modalCode image{
+  width: 400rpx;
+  height: 400rpx;
+}

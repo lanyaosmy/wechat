@@ -1,0 +1,90 @@
+/* pages/receiver/index.wxss */
+@import "../templates/reList.wxss";
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.topBar{
+  width: 100%;
+  height: 10%;
+  background: #fff;
+  position: sticky;
+  top:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topLeft{
+  width: 50%;
+  height:100%;
+  border-right:1rpx solid #f2f2f2; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #AAE6CC;
+}
+.bottomBar{
+  width: 100%;
+  height: 8%;
+  background: #fff;
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottomLeft{
+  width: 50%;
+  height:100%;
+  background: #AAE6CC;
+  color: #fff;
+  border-right:1rpx solid #f2f2f2; 
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bottomRight{
+  width: 50%;
+  height:100%;
+  text-align: center;
+  background: #AAE6CC;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bon{
+  background: #5EE083;
+}
+.scanImage{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 30rpx;
+}
+
+.scanTitle{
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.mainItem{
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx;
+  display: none;
+  margin-bottom: 15%;
+}
+.on{
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+

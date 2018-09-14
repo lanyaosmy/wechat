@@ -1,0 +1,98 @@
+/* pages/pick/pick.wxss */
+@import "../templates/listItem.wxss";
+page{
+  height: 100%;
+  background: #f2f2f2;
+}
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx;
+  background-color: #55efc4;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 999;
+} 
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 33.33%; 
+  color: #F8F8F8; 
+} 
+.on{ 
+  color: #fff; 
+  border-bottom: 5rpx solid #FFFF8C;
+} 
+ 
+ ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.swiper-box{ 
+  display: block; 
+  width: 100%; 
+  overflow: scroll; 
+} 
+.swiper-box view{ 
+  text-align: center; 
+} 
+.modalMask{
+  height:100%;
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+.modalMenu{
+  position: fixed;
+  top:25%;
+  left:20%;
+  overflow: hidden;
+  z-index: 999;
+  background: #fff;
+  width:60%;
+  height:50%;
+  border-radius: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalMenu button{
+  width:100%;
+  color: #66ccff;
+  font-size: 30rpx;
+}
+.modalTitle{
+  margin: 10rpx;
+}
+.modalTitle text{
+  font-size:30rpx;
+  font-weight: 700;
+}
+.modalCode image{
+  width:400rpx;
+  height: 400rpx;
+}
+
+/*更多按钮*/
+.more{
+    width:48%;
+    box-shadow:0px 0px 8rpx 2rpx #e7e7e7;
+    border-radius: 20rpx;
+    text-align: center;
+    padding: 10rpx;
+    background: #fff;
+}
+.more text{
+    font-size: 30rpx;
+    font-weight: 700;
+    color: #707070;
+}

@@ -1,0 +1,20 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称       </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="infolist" bindtap='changeToTel'>
+    <image src="../images/tel.png" class="infoicon"></image>
+    <text class="infotitle">电话号码</text>
+    <image src="../images/right.png" class="rightRow"></image>
+  </view>
+  <view class="infolist" style='border-top:0;' bindtap='changeToAddr'>
+    <image src="../images/addr.png" class="infoicon"></image>
+    <text class="infotitle">地址</text>
+    <image src="../images/right.png" class="rightRow"></image>
+  </view>
+</view>

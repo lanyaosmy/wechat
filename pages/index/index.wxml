@@ -1,0 +1,53 @@
+<import src="../templates/listItem.wxml"/>
+<view class='contain'>
+  <!--顶部栏-->
+  <view class="topBar">
+    <view class="scanButton">
+      <image src='../images/scan.png' class="scanImage" bindtap='scanQRCode'></image>
+    </view>
+    <view class="searchBar">
+      <input type='text' placeholder='请输入订单号' bindblur="searchBlur" bindinput="inputOrder" value="{{orderid}}"></input>
+      <image src="../images/search.png" class="infoicon" bindtap='searchOrder'></image>
+    </view>
+  </view>
+  <!--主页-->
+  <view class="main" wx:if="{{showMain}}">
+    <view class="title">
+      <text>待签收</text>
+    </view>
+    <block wx:for="{{notReceList}}" wx:key="orderNum">
+      <template is="listItemIndex" data="{{...item}}"></template>
+    </block>
+    <view class="more" bindtap='checkReceive'>
+     <text>查看更多</text>
+    </view>
+    <view class="title">
+      <text>运输中</text>
+    </view>
+    <block wx:for="{{transportList}}"  wx:key="orderNum">
+      <template is="listItem" data="{{...item}}"></template>
+    </block>
+    <view class="more" bindtap='checkReceive'>
+     <text>查看更多</text>
+    </view>
+    <view class="title">
+      <text>已签收</text>
+    </view>
+    <block wx:for="{{receivedList}}"  wx:key="orderNum">
+      <template is="listItemRece" data="{{...item}}"></template>
+    </block>
+    <view class="more" bindtap='checkReceive'>
+     <text>查看更多</text>
+    </view>
+  </view>
+  <view class="main" wx:if="{{showMain==false}}">
+    <view class="title">
+      <text>查询结果</text>
+    </view>
+    <block wx:for="{{searchResult}}">
+      <template is="listItemSearch" data="{{...item}}"></template>
+    </block>
+  </view>
+</view>
+
+

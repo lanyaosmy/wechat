@@ -1,0 +1,60 @@
+<!--pages/lastLocation/index.wxml-->
+<!--pages/receiver/index.wxml-->
+<!--顶栏-->
+<import src="../templates/reList.wxml"/>
+<view class="topBar">
+  <view class="topLeft" bindtap="scanToRece">
+    <image class="scanImage" src="../images/scan_rece.png"></image>
+    <text class="scanTitle">扫码收件</text>
+  </view>
+  <view class="topLeft" bindtap="scanToSend">
+    <image class="scanImage" src="../images/scan_send.png"></image>
+    <text class="scanTitle">扫码配送</text>
+  </view>
+  <view class="topLeft" bindtap="scanToPick">
+    <image class="scanImage" src="../images/scan_pick.png"></image>
+    <text class="scanTitle">用户取件</text>
+  </view>
+</view>
+<!--主列表项-->
+<view class="mainItem {{_hide==0?'on':''}}">
+  <view class="tip">
+    <text>————————点击确认揽收————————</text>
+  </view>
+  <block wx:for="{{notReceList}}" wx:key="id">
+    <template is="recelist" data="{{...item}}"></template>
+  </block>
+</view>
+<view class="mainItem {{_hide==1?'on':''}}">
+  <block wx:for="{{notSendList}}" wx:key="id">
+    <template is="sendList" data="{{...item}}"></template>
+  </block>
+</view>
+<view class="mainItem {{_hide==2?'on':''}}">
+  <block wx:for="{{notPickList}}" wx:key="id">
+    <template is="pickList" data="{{...item}}"></template>
+  </block>
+</view>
+<!--底部按钮-->
+<view class="bottomBar">
+  <view class="bottomLeft {{_hide==0?'bon':''}}" bindtap="changeToRece">
+    <text>未揽收</text>
+  </view>
+  <view class="bottomLeft {{_hide==1?'bon':''}}" bindtap="changeToSend">
+    <text>未配送</text>
+  </view>
+    <view class="bottomLeft {{_hide==2?'bon':''}}" bindtap="changeToPick">
+    <text>未取件</text>
+  </view>
+</view>
+  <view class="modalMask" wx:if="{{showModal}}" catchtouchmove="preventTouchMove">
+    <view class="modalMenu" wx:if="{{showModal}}">
+      <view class="modalTitle">
+        <text>{{location}}</text>
+      </view>
+      <view class="modalCode">
+        <image src="{{picUrl}}"></image>
+      </view>
+      <button bindtap="onConfirm">确定</button>
+    </view>
+  </view>

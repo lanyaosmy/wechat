@@ -1,0 +1,20 @@
+<!--pages/send/chooseSite.wxml
+<view  class='searchBar'>
+    <image src="../images/site.png" class="infoicon"></image>
+    <input type='text' placeholder='请输入站点名称' bindinput="setTel" class="inputBox"></input>
+    <image src="../images/search.png" class="infoicon"></image>
+</view>
+-->
+<view class="main">
+  <view class="title">
+    <text>附近可寄件的站点</text>
+  </view>
+  <view class="list">
+      <radio-group bindchange="radioChange" >
+        <label wx:for="{{item}}">
+            <radio value="{{item.detail}}" color='#AAE6CC'>{{item.detail}}</radio>   
+        </label>   
+      </radio-group>
+  </view>
+  <button bindtap="confirmSite">确认</button>
+</view>
